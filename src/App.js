@@ -1,22 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter, Router, Route, Routes  , } from 'react-router-dom';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import CardItem from "./Componets/CardItem";
+import ViewFood from "./Componets/ViewFood";
+import AddFood from "./Componets/AddFood";
+import Navbar from "./Componets/Navbar";
+import PieChart from "./Componets/PieChart";
+import { StackChart } from "./Componets/StackChart";
+import { SideNavbar } from "./Componets/SideNavbar";
 
-import ViewFood from './Componets/ViewFood';
-import AddFood from './Componets/AddFood';
-import Navbar from './Componets/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<h1>Hello This is Food App Home Page </h1>}></Route>
-          <Route path="/AddFood" element={<AddFood />}></Route>
-          <Route path="/ViewFood" element={<ViewFood />}></Route>
-         
-        </Routes>
-      </BrowserRouter>
+      <div className="sidedNav">
+        <SideNavbar />
+      </div>
+      <div className="right-item">
+        <Navbar />
+        <div className="main-part">
+          <CardItem />
+          <div className="chart">
+            <StackChart />
+            <PieChart />
+          </div>
+        </div>
+      </div>
+
       
     </div>
   );

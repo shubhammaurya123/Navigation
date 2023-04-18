@@ -1,15 +1,17 @@
 import React from "react";
-import '../App.css'
+import "../App.css";
+import {BsBell ,BsBagDash} from "react-icons/bs"
+import {RxDashboard} from "react-icons/rx"
+const Navbar = () => {
+  return (
+    <div className="navbar">
+        <input  type ="text" className="searchbar" placeholder="Search...."></input>
+        <BsBell className="icon"/>
+        <BsBagDash className="icon"/>
+        <RxDashboard className="icon"/>
+    </div>
+   
+  );
+};
 
-const Navbar = ()=>{
-      return( <div  className="navbar">
-                 
-                     <span><a href="/"> Home</a></span>
-                     <span> <a href="/AddFood"> AddFood</a></span>
-                      <span><a href="/ViewFood">ViewFood</a></span>
-                 
-           </div>
-       )
-}
-
-export default Navbar
+export default Navbar;
