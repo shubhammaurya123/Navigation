@@ -5,10 +5,8 @@ import {RxDashboard} from "react-icons/rx"
 const Navbar = () => {
   return (
     <div className="navbar">
-        <input  type ="text" className="searchbar" placeholder="Search...."></input>
-        <BsBell className="icon"/>
-        <BsBagDash className="icon"/>
-        <RxDashboard className="icon"/>
+         <span> <a href="/addfood">AddFood</a></span>
+         <span> <a href="/viewfood">ViewFood</a></span>
     </div>
    
   );
